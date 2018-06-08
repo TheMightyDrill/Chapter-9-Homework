@@ -80,7 +80,7 @@ public:
 
 ostream& operator<<(ostream& os, State& dt)
 {
-	os << dt.getCapital() << ' ' << dt.getCapital() << endl;
+	os << dt.getName() << ' ' << dt.getCapital() << endl;
 	return os;
 }
 
@@ -331,8 +331,8 @@ hashT<elemType>::hashT(int size)
 template <class elemType>
 hashT<elemType>::~hashT()
 {
-	delete HTable;
-	delete indexStatusList;
+	//delete HTable;
+	//delete indexStatusList;
 }
 
 int main() {
@@ -367,7 +367,6 @@ int main() {
 	hTable.insert(hTable.hashFunc(dep.getName()), dep);
 
 	hTable.print();
-
-	system("pause");
+	system("Pause");
 	return 0;
 }
